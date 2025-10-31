@@ -1,0 +1,28 @@
+{
+"dashboard": {
+"id": null,
+"uid": "anime-quotes-dashboard",
+"title": "Anime Quotes - Basic Metrics",
+"panels": [
+{
+"type": "graph",
+"title": "Requests per second (rate)",
+"id": 1,
+"targets": [
+{ "expr": "rate(api_requests_total[1m])", "legendFormat": "req/s" }
+],
+"gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 }
+},
+{
+"type": "graph",
+"title": "p90 request duration (s)",
+"id": 2,
+"targets": [
+{ "expr": "histogram_quantile(0.9, sum(rate(api_request_duration_seconds_bucket[5m])) by (le))", "legendFormat": "p90" }
+],
+"gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 }
+}
+],
+"schemaVersion": 30
+}
+}
