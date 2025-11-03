@@ -1,9 +1,12 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 const { requestCounter, requestHistogram, register } = require('./metrics');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+app.use(cors());
 
 // Health endpoint
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
