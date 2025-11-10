@@ -16,7 +16,7 @@ It includes observability tooling using **Prometheus** for metrics collection an
 | Layer | Technology |
 |-------|-------------|
 | **Frontend** | React (JavaScript) |
-| **Backend** | Python Flask |
+| **Backend** | Nodejs |
 | **Monitoring** | Prometheus + Grafana |
 | **Containerization** | Docker & Docker Compose |
 | **API Source** | [AnimeChan.io](https://animechan.io) |
@@ -28,7 +28,7 @@ It includes observability tooling using **Prometheus** for metrics collection an
 - 🎨 Beautiful, responsive frontend UI built with React  
 - 🧠 Random anime quote generator  
 - 🔁 Dynamic fetching and rendering with button interaction  
-- 🧩 Backend API written in Flask (with CORS enabled)  
+- 🧩 Backend API written in Nodejs (with CORS enabled)  
 - 📊 Prometheus metrics endpoint (`/metrics`)  
 - 📈 Grafana dashboard with:
   - API request counts  
